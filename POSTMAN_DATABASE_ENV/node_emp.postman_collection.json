@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "cd0b5fb3-9067-4b19-a2b1-8b688d09c808",
+		"name": "node_emp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "343926"
+	},
+	"item": [
+		{
+			"name": "Create :: emp_service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjExLCJmaXNydG5hbWUiOiJSYWp1IiwibGFzdG5hbWUiOiJOYXlhciIsImVtYWlsIjoicmFqdUB5b3BtYWlsLmNvbSIsIm1vYmlsZSI6Ijk4OTY1NTA1MDEifSwiaWF0IjoxNjY3NzQ1NDI0LCJleHAiOjE2Njc3NDkwMjR9.EehZyUAk4xC0vLWFuZzsQ81hMmNI6vTwYBqosusBH8M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Raju\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"raju@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"mobile\": \"9896550501\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/emp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"emp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create :: user_service",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Shivam\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"shivam@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"mobile\": \"9896550501\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-Ql9jBWE2i5kHDOBmoIN5OHuFtbQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 13:38:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 1,\n    \"message\": \"Records created successfully\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 5,\n        \"serverStatus\": 2,\n        \"warningCount\": 0,\n        \"message\": \"\",\n        \"protocol41\": true,\n        \"changedRows\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getEmpByID :: user_service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Shivam\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"shivam@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"mobile\": \"9896550501\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/emp/detail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"emp",
+						"detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmpList :: user_service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Shivam\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"shivam@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"mobile\": \"9896550501\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/emp/detail/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"emp",
+						"detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmp :: user_service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjExLCJmaXNydG5hbWUiOiJSYWp1IiwibGFzdG5hbWUiOiJOYXlhciIsImVtYWlsIjoicmFqdUB5b3BtYWlsLmNvbSIsIm1vYmlsZSI6Ijk4OTY1NTA1MDEifSwiaWF0IjoxNjY3NzQ1NDI0LCJleHAiOjE2Njc3NDkwMjR9.EehZyUAk4xC0vLWFuZzsQ81hMmNI6vTwYBqosusBH8M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Ashok\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"ravi@yopmail.com\",\r\n    \"mobile\": \"9896550502\",\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/emp/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"emp",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create :: user_service",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Shivam\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"shivam@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"mobile\": \"9896550501\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-Ql9jBWE2i5kHDOBmoIN5OHuFtbQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 13:38:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 1,\n    \"message\": \"Records created successfully\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 5,\n        \"serverStatus\": 2,\n        \"warningCount\": 0,\n        \"message\": \"\",\n        \"protocol41\": true,\n        \"changedRows\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteEmp :: user_service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjExLCJmaXNydG5hbWUiOiJSYWp1IiwibGFzdG5hbWUiOiJOYXlhciIsImVtYWlsIjoicmFqdUB5b3BtYWlsLmNvbSIsIm1vYmlsZSI6Ijk4OTY1NTA1MDEifSwiaWF0IjoxNjY3NzQ1NDI0LCJleHAiOjE2Njc3NDkwMjR9.EehZyUAk4xC0vLWFuZzsQ81hMmNI6vTwYBqosusBH8M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/emp/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"emp",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create :: user_service",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Shivam\",\r\n    \"lastname\": \"Nayar\",\r\n    \"email\": \"shivam@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"mobile\": \"9896550501\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-Ql9jBWE2i5kHDOBmoIN5OHuFtbQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Nov 2022 13:38:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 1,\n    \"message\": \"Records created successfully\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 5,\n        \"serverStatus\": 2,\n        \"warningCount\": 0,\n        \"message\": \"\",\n        \"protocol41\": true,\n        \"changedRows\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
